@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+//premier tableau, CSS à revoir pour les couleurs et mettre la sidebar commune à toutes les pages et lien de la page//
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mes ventes</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Vendors styles-->
+    <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
+    <link rel="stylesheet" href="css/vendors/simplebar.css">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- We use those styles to show code examples, you should remove them in your application.-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="css/examples.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        // Shared ID
+        gtag('config', 'UA-118965717-3');
+        // Bootstrap ID
+        gtag('config', 'UA-118965717-5');
+    </script>
+    <div class="tab-content rounded-bottom">
+        <table class="tab-pane p-3 active preview" role="tabpanel" id="preview-132">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Dossiers</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Prix</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Dossier n°0123456789 Appartement F2 Bordeaux 47m2</th>
+                    <td>Vendu</td>
+                    <td>157 000</td>
+                </tr>
+                <tr class="table-primary">
+                    <th scope="row">Dossier n°12345678900 Appartement F4 Libourne 90m2</th>
+                    <td>Vendu</td>
+                    <td>209 999</td>
+                </tr>
+                <tr class="table-secondary">
+                    <th scope="row">Dossier n°13245678900 Maison F6 Libourne 123m2</th>
+                    <td>Vendu</td>
+                    <td>450 700</td>
+                </tr>
+                <tr class="table-success">
+                    <th scope="row">Dossier n°142345678900 Appartement F2 Bordeaux 44m2</th>
+                    <td>En cours</td>
+                    <td>...</td>
+                </tr>
+                <tr class="table-danger">
+                    <th scope="row">Dossier n°15234678909 Maison F5 Libourne 110m2</th>
+                    <td>Vendu</td>
+                    <td>390 000</td>
+                </tr>
+                <tr class="table-warning">
+                    <th scope="row">Dossier n°16234578909 Appartement F3 Bordeaux 67m2</th>
+                    <td>En cours</td>
+                    <td>...</td>
+                </tr>
+                <tr class="table-info">
+                    <th scope="row">Dossier n°17234568909 Appartement F4 Bordeaux 74m2</th>
+                    <td>En cours</td>
+                    <td>...</td>
+                </tr>
+                <tr class="table-light">
+                    <th scope="row">Dossier n°18234567098 Maison F5 Angouleme 117m2</th>
+                    <td>En cours</td>
+                    <td>...</td>
+                </tr>
+                <tr class="table-dark">
+                    <th scope="row">Dossier n°19234567890 Appartement F5 Bordeaux 98m2</th>
+                    <td>Vendu</td>
+                    <td>498 000</td>
+                </tr>
+                </tbody>
+            </table>
+        </table>
+    </div>
+</head>
+</html>
