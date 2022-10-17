@@ -57,7 +57,47 @@
   </script>
 </head>
 <body>
-<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+<!--Début du header log-->
+
+<div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
+  <div class="sidebar-brand d-none d-md-flex">
+    <svg class="sidebar-brand-full" width="118" height="46" alt="Immo Aquitaine 33">
+      <use xlink:href="assets/brand/coreui.svg#full"></use>
+    </svg>
+    <svg class="sidebar-brand-narrow" width="46" height="46" alt="Immo Aquitaine 33">
+      <use xlink:href="assets/brand/coreui.svg#signet"></use>
+    </svg>
+  </div>
+  <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
+</div>
+<div class="wrapper d-flex flex-column min-vh-100 bg-secondary">
+  <header class="header header-sticky mb-4">
+    <div class="container-fluid">
+      <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+        <svg class="icon icon-lg">
+          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+        </svg>
+      </button><a class="header-brand d-md-none" href="#">
+      <svg width="118" height="46" alt="CoreUI Logo">
+        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-house"></use>
+      </svg></a>
+
+    </div>
+    <div class="header-divider"></div>
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb my-0 ms-2">
+          <li class="breadcrumb-item">
+            <!-- if breadcrumb is single--><span>Acceuil</span>
+          </li>
+          <li class="breadcrumb-item active"><span>Connexion</span></li>
+        </ol>
+      </nav>
+
+    </div>
+  </header>
+<!--Début du conge login-->
+<div class="bg-secondary min-vh-100 d-flex flex-row align-items-center">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
@@ -80,7 +120,7 @@
               </div>
               <div class="row">
                 <div class="col-6">
-                  <a class="nav-link" href="index.html"><button class="btn btn-primary px-4" type="button">Connexion</button></a>
+                  <a class="nav-link" href="index.html"><button class="btn btn-dark px-4" type="button">Inscription</button></a>
                 </div>
                 <div class="col-6 text-end">
                   <a class="nav-link" href="forgotPassword.html"><button class="btn btn-link px-0" type="button">J'ai oublié mon mot de passe ?</button></a>
@@ -88,11 +128,11 @@
               </div>
             </div>
           </div>
-          <div class="card col-md-5 text-white bg-primary py-5">
+          <div class="card col-md-5 text-white bg-dark py-5">
             <div class="card-body text-center">
               <div>
                 <h2>Connexion</h2>
-                <p> Veuillez vous connecter avec vos identifiants.</p>
+                <p>Inscrivez-vous, en un clic c'est fait !</p>
                 <a class="nav-link" href="register.html"><button class="btn btn-lg btn-outline-light mt-3" type="button">Inscrivez-vous!</button></a>
               </div>
             </div>
@@ -102,6 +142,14 @@
     </div>
   </div>
 </div>
+  <!--Début du footer log-->
+</div>
+<footer class="footer">
+  <div><a href="https://coreui.io">Immo Aquitaine 33 </a><a href="https://coreui.io"></a> © 2022 creativeLabs.</div>
+  <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
+</footer>
+</div>
+
 <!-- CoreUI and necessary plugins-->
 <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
 <script src="vendors/simplebar/js/simplebar.min.js"></script>
