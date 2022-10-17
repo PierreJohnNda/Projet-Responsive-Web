@@ -76,6 +76,10 @@
   --cui-link-hover-color: #2819af;
   --cui-code-color: #d63384;
   --cui-highlight-bg: #fff3cd;
+  --cui-form-range-thumb-active-bg: rgba(48, 136, 109, 0.4)
+  --cui-form-range-thumb-bg: #26375d;
+  --cui-form-range-thumb-disabled-bg: #a2a2a2
+  --cui-form-range-track-bg: rgba(155, 155, 56, 0.53)
 }
 
 *,
