@@ -1,22 +1,8 @@
 <!DOCTYPE html>
-<!--
-* CoreUI - Free Bootstrap Admin Template
-* @version v4.2.1
-* @link https://coreui.io
-* Copyright (c) 2022 creativeLabs Łukasz Holeczek
-* Licensed under MIT (https://coreui.io/license)
--->
-<!-- Breadcrumb-->
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
-    <base href="./">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
-    <meta name="author" content="Łukasz Holeczek">
-    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>Immo Aquitaine 33</title>
+    <meta charset="UTF-8">
+    <title>Mes ventes</title>
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
@@ -50,6 +36,7 @@
         function gtag() {
             dataLayer.push(arguments);
         }
+
         gtag('js', new Date());
         // Shared ID
         gtag('config', 'UA-118965717-3');
@@ -58,6 +45,7 @@
     </script>
 </head>
 <body>
+<!--Début du header-->
 <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
     <div class="sidebar-brand d-none d-md-flex">
         <svg class="sidebar-brand-full" width="118" height="46" alt="Immo Aquitaine 33">
@@ -71,18 +59,18 @@
         <li class="nav-item"><a class="nav-link" href="login.html">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-            </svg>Mon espace<span class="badge badge-sm "></span></a></li>
+            </svg>Mon espace</a></li>
         <li class="nav-title"> Actualités</li>
-        <li class="nav-item"><a class="nav-link" href="#">
+        <li class="nav-item"><a class="nav-link" href="mes_ventes.html">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-wallet"></use>
             </svg>Mes ventes</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">
+        <li class="nav-item"><a class="nav-link" href="typography.html">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chat-bubble"></use>
             </svg>Chats et appels</a></li>
         <li class="nav-title">Analyses</li>
-        <li class="nav-group"><a class="nav-link" href="base_clients.html">
+        <li class="nav-group"><a class="nav-link" href="#">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-people"></use>
             </svg>Base clients</a>
@@ -126,18 +114,16 @@
     </ul>
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
 </div>
-<div class="wrapper d-flex flex-column min-vh-100 bg-light">
+<div class="wrapper d-flex flex-column min-vh-100 bg-secondary">
     <header class="header header-sticky mb-4">
         <div class="container-fluid">
-
-
             <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
                 <svg class="icon icon-lg">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
                 </svg>
             </button><a class="header-brand d-md-none" href="#">
             <svg width="118" height="46" alt="CoreUI Logo">
-                <use xlink:href="assets/brand/coreui.svg#full"></use>
+                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-house"></use>
             </svg></a>
             <ul class="header-nav d-none d-md-flex">
                 <li class="nav-item"><a class="nav-link" href="#">Tableaux de bord</a></li>
@@ -200,105 +186,146 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb my-0 ms-2">
                     <li class="breadcrumb-item">
-                        <!-- if breadcrumb is single--><span>Home</span>
+                        <!-- if breadcrumb is single--><span>Acceuil</span>
                     </li>
-                    <li class="breadcrumb-item active"><span>Bases Annonces</span></li>
+                    <li class="breadcrumb-item active"><span>Mes ventes</span></li>
                 </ol>
             </nav>
 
         </div>
     </header>
 
-<!-- Filtre de recherche -->
+    <!--Début du body code-->
 
-    <p>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Rechercher</option>
-            <option value="1">Cenon</option>
-            <option value="2">Bègle</option>
-            <option value="3">Gradignan</option>
-        </select>
-    </p>
-
-    <!--Debut des annonce-->
-
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Cenon</h5>
-                        <p class="card-text">Maison 5 pièces, composé d'une </p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
+    <div class="body flex-grow-1 px-3">
+        <div class="container-lg">
+            <div class="car"></div>
+            <div class="card mb-4">
+                <div class="tab-content rounded-bottom">
+                    <table class="tab-pane p-3 active preview" role="tabpanel" id="preview-132">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Dossiers</th>
+                                <th scope="col">Statut</th>
+                                <th scope="col">Prix (en euro)</th>
+                            </tr>
+                            </thead>
+                            <div>
+                                <tr>
+                                    <th scope="row">Dossier n°0123456789 Appartement F2 Bordeaux 47m2</th>
+                                    <td>Vendu</td>
+                                    <td>157 000</td>
+                                </tr>
+                                <tr class="table-primary">
+                                    <th scope="row">Dossier n°12345678900 Appartement F4 Libourne 90m2</th>
+                                    <td>Vendu</td>
+                                    <td>209 999</td>
+                                </tr>
+                                <tr class="table-secondary">
+                                    <th scope="row">Dossier n°13245678900 Maison F6 Libourne 123m2</th>
+                                    <td>Vendu</td>
+                                    <td>450 700</td>
+                                </tr>
+                                <tr class="table-success">
+                                    <th scope="row">Dossier n°142345678900 Appartement F2 Bordeaux 44m2</th>
+                                    <td>En cours</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr class="table-danger">
+                                    <th scope="row">Dossier n°15234678909 Maison F5 Libourne 110m2</th>
+                                    <td>Vendu</td>
+                                    <td>390 000</td>
+                                </tr>
+                                <tr class="table-warning">
+                                    <th scope="row">Dossier n°16234578909 Appartement F3 Bordeaux 67m2</th>
+                                    <td>En cours</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr class="table-info">
+                                    <th scope="row">Dossier n°17234568909 Appartement F4 Bordeaux 74m2</th>
+                                    <td>En cours</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr class="table-light">
+                                    <th scope="row">Dossier n°18234567098 Maison F5 Angouleme 117m2</th>
+                                    <td>En cours</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr class="table-dark">
+                                    <th scope="row">Dossier n°19234567890 Appartement F5 Bordeaux 98m2</th>
+                                    <td>Vendu</td>
+                                    <td>498 000</td>
+                                </tr>
+                            </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/4.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Talence</h5>
-                        <p class="card-text">Studio étudiant sur Talence...</p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Bègle</h5>
-                        <p class="card-text">Appartement de 2 pièces, RDC</p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Gradigan</h5>
-                        <p class="card-text">Maison de 5 pièces </p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/2-1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Villenave d'Ornon</h5>
-                        <p class="card-text">Appartement de 3 pièces avec une pièce de vie et un jardin privatif </p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/2-2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Pessac</h5>
-                        <p class="card-text">Studio lumineux, situé non loin du centre </p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
-    <!--Fin des annonces -->
 </div>
-<footer class="footer">
-    <div><a href="https://coreui.io">Immo Aquitaine 33 </a><a href="https://coreui.io"></a> © 2022 creativeLabs.</div>
-    <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
-</footer>
 </div>
-<!-- CoreUI and necessary plugins-->
-<script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
-<script src="vendors/simplebar/js/simplebar.min.js"></script>
-<script>
-</script>
+
+<div class="body flex-grow-1 px-3">
+    <div class="container-lg">
+        <div class="car"></div>
+        <div class="card mb-4">
+            <div class="card-header"><strong>Historique des ventes</strong><span class="small ms-1"></span>
+            </div>
+            <div class="card-body">
+                <p class="text-medium-emphasis small">Récapitulatif et comparaison des ventes de l'an dernier et de cette année</p>
+                <div class="example">
+                    <div class="tab-content rounded-bottom">
+                        <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-387">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Ventes (année n-1)</th>
+                                    <th scope="col">Chiffre d'affaire (année n-1 en euro)</th>
+                                    <th scope="col">Ventes année en cours</th>
+                                    <th scope="col">Chiffre d'affaire prévisionnel (en euro)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">Trimestre 1 : <br>17</th>
+                                    <td>1 999 000</td>
+                                    <td>14</td>
+                                    <td>1 470 000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Trimestre 2 : <br>12</th>
+                                    <td>1 330 000</td>
+                                    <td>19</td>
+                                    <td>2 559 000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Trimestre 3 : <br>11</th>
+                                    <td>1 760 000</td>
+                                    <td>22</td>
+                                    <td>4 050 000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Trimestre 4 : <br>13</th>
+                                    <td>3 333 330</td>
+                                    <td>23</td>
+                                    <td>7 660 000</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div><a href="https://coreui.io">Immo Aquitaine 33 </a><a href="https://coreui.io"></a> © 2022 creativeLabs.</div>
+            <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
+        </footer>
+    </div>
+</div>
+</div>
+</div>
+</div>
 
 </body>
 </html>

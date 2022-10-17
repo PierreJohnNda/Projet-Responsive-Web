@@ -7,7 +7,7 @@
 * Licensed under MIT (https://coreui.io/license)
 -->
 <!-- Breadcrumb-->
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <base href="./">
     <meta charset="utf-8">
@@ -61,7 +61,7 @@
 <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
     <div class="sidebar-brand d-none d-md-flex">
         <svg class="sidebar-brand-full" width="118" height="46" alt="Immo Aquitaine 33">
-            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-house"></use>
+            <use xlink:href="assets/brand/coreui.svg#full"></use>
         </svg>
         <svg class="sidebar-brand-narrow" width="46" height="46" alt="Immo Aquitaine 33">
             <use xlink:href="assets/brand/coreui.svg#signet"></use>
@@ -71,39 +71,39 @@
         <li class="nav-item"><a class="nav-link" href="login.html">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-            </svg>Mon espace<span class="badge badge-sm "></span></a></li>
+            </svg>Mon espace</a></li>
         <li class="nav-title"> Actualités</li>
-        <li class="nav-item"><a class="nav-link" href="#">
+        <li class="nav-item"><a class="nav-link" href="colors.html">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-wallet"></use>
             </svg>Mes ventes</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">
+        <li class="nav-item"><a class="nav-link" href="typography.html">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chat-bubble"></use>
             </svg>Chats et appels</a></li>
-        <li class="nav-title">Analyses</li>
-        <li class="nav-group"><a class="nav-link" href="base_clients.html">
+        <li class="nav-title">Analytique</li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-people"></use>
             </svg>Base clients</a>
         </li>
-        <li class="nav-group"><a class="nav-link " href="calendrier.html">
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
             </svg> Calendrier</a>
 
         </li>
-        <li class="nav-item"><a class="nav-link" href="Base_annonces.html">
+        <li class="nav-item"><a class="nav-link" href="calendar.html">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-description"></use>
             </svg>Base annonces</a></li>
-        <li class="nav-group"><a class="nav-link" href="centre_de_contact.html">
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-contact"></use>
             </svg>Centre de contacts</a>
         </li>
 
-        <li class="nav-group"><a class="nav-link" href="#">
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
             </svg> Notifications</a>
@@ -114,10 +114,10 @@
         </li>
 
         <li class="nav-title">Extras</li>
-        <li class="nav-group"><a class="nav-link" href="analytiques.html">
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chart"></use>
-            </svg>Analytiques</a>
+            </svg>Mes statisques</a>
         </li>
         <li class="nav-item mt-auto"><a class="nav-link" href="https://coreui.io/docs/templates/installation/" target="_blank">
             <svg class="nav-icon">
@@ -129,8 +129,6 @@
 <div class="wrapper d-flex flex-column min-vh-100 bg-light">
     <header class="header header-sticky mb-4">
         <div class="container-fluid">
-
-
             <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
                 <svg class="icon icon-lg">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
@@ -140,9 +138,9 @@
                 <use xlink:href="assets/brand/coreui.svg#full"></use>
             </svg></a>
             <ul class="header-nav d-none d-md-flex">
-                <li class="nav-item"><a class="nav-link" href="#">Tableaux de bord</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Utilisateurs</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Paramètres</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
             </ul>
             <ul class="header-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#">
@@ -187,7 +185,7 @@
                         <div class="dropdown-divider"></div><a class="dropdown-item" href="#"></a>
                         <svg class="icon me-2">
                             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
-                        </svg>Vérouiller le compte<a class="dropdown-item" href="login.html">
+                        </svg>Vérouiller le compte<a class="dropdown-item" href="#">
                         <svg class="icon me-2">
                             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
                         </svg>Se déconnecter</a>
@@ -202,97 +200,66 @@
                     <li class="breadcrumb-item">
                         <!-- if breadcrumb is single--><span>Home</span>
                     </li>
-                    <li class="breadcrumb-item active"><span>Bases Annonces</span></li>
+                    <li class="breadcrumb-item active"><span>Blank</span></li>
                 </ol>
             </nav>
-
         </div>
     </header>
+    <div class="body flex-grow-1 px-3">
+        <div class="container-lg">
 
-<!-- Filtre de recherche -->
-
-    <p>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Rechercher</option>
-            <option value="1">Cenon</option>
-            <option value="2">Bègle</option>
-            <option value="3">Gradignan</option>
-        </select>
-    </p>
-
-    <!--Debut des annonce-->
-
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Cenon</h5>
-                        <p class="card-text">Maison 5 pièces, composé d'une </p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/4.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Talence</h5>
-                        <p class="card-text">Studio étudiant sur Talence...</p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Bègle</h5>
-                        <p class="card-text">Appartement de 2 pièces, RDC</p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Gradigan</h5>
-                        <p class="card-text">Maison de 5 pièces </p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/2-1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Villenave d'Ornon</h5>
-                        <p class="card-text">Appartement de 3 pièces avec une pièce de vie et un jardin privatif </p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/2-2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Pessac</h5>
-                        <p class="card-text">Studio lumineux, situé non loin du centre </p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
+            <div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="card-group d-block d-md-flex row">
+                                <div class="card col-md-7 p-4 mb-0">
+                                    <div class="card-body">
+                                        <h1>Connexion</h1>
+                                        <p class="text-medium-emphasis">Connectez-vous à votre compte</p>
+                                        <div class="input-group mb-3"><span class="input-group-text">
+                      <svg class="icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+                      </svg></span>
+                                            <input class="form-control" type="text" placeholder="Username">
+                                        </div>
+                                        <div class="input-group mb-4"><span class="input-group-text">
+                      <svg class="icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
+                      </svg></span>
+                                            <input class="form-control" type="password" placeholder="Password">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <a class="nav-link" href="index.html"><button class="btn btn-primary px-4" type="button">Connexion</button></a>
+                                            </div>
+                                            <div class="col-6 text-end">
+                                                <a class="nav-link" href="forgotPassword.html"><button class="btn btn-link px-0" type="button">J'ai oublié mon mot de passe ?</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card col-md-5 text-white bg-primary py-5">
+                                    <div class="card-body text-center">
+                                        <div>
+                                            <h2>Connexion</h2>
+                                            <p> Veuillez vous connecter avec vos identifiants.</p>
+                                            <a class="nav-link" href="register.html"><button class="btn btn-lg btn-outline-light mt-3" type="button">Inscrivez-vous!</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-    <!--Fin des annonces -->
-</div>
-<footer class="footer">
-    <div><a href="https://coreui.io">Immo Aquitaine 33 </a><a href="https://coreui.io"></a> © 2022 creativeLabs.</div>
-    <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
-</footer>
+    <footer class="footer">
+        <div><a href="https://coreui.io">Immo Aquitaine 33 </a><a href="https://coreui.io"></a> © 2022 creativeLabs.</div>
+        <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
+    </footer>
 </div>
 <!-- CoreUI and necessary plugins-->
 <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>

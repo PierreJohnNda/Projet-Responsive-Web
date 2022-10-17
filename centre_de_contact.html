@@ -34,6 +34,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
     <!-- Vendors styles-->
     <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
     <link rel="stylesheet" href="css/vendors/simplebar.css">
@@ -42,6 +43,49 @@
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
     <link href="css/examples.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #008CBA;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
     <script>
@@ -71,18 +115,18 @@
         <li class="nav-item"><a class="nav-link" href="login.html">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-            </svg>Mon espace<span class="badge badge-sm "></span></a></li>
+            </svg>Mon espace</a></li>
         <li class="nav-title"> Actualités</li>
-        <li class="nav-item"><a class="nav-link" href="#">
+        <li class="nav-item"><a class="nav-link" href="mes_ventes.html">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-wallet"></use>
             </svg>Mes ventes</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">
+        <li class="nav-item"><a class="nav-link" href="gg.html">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-chat-bubble"></use>
             </svg>Chats et appels</a></li>
-        <li class="nav-title">Analyses</li>
-        <li class="nav-group"><a class="nav-link" href="base_clients.html">
+        <li class="nav-title">Analyse</li>
+        <li class="nav-group"><a class="nav-link" href="#">
             <svg class="nav-icon">
                 <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-people"></use>
             </svg>Base clients</a>
@@ -126,18 +170,16 @@
     </ul>
     <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
 </div>
-<div class="wrapper d-flex flex-column min-vh-100 bg-light">
+<div class="wrapper d-flex flex-column min-vh-100 bg-secondary">
     <header class="header header-sticky mb-4">
         <div class="container-fluid">
-
-
             <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
                 <svg class="icon icon-lg">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
                 </svg>
             </button><a class="header-brand d-md-none" href="#">
             <svg width="118" height="46" alt="CoreUI Logo">
-                <use xlink:href="assets/brand/coreui.svg#full"></use>
+                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-house"></use>
             </svg></a>
             <ul class="header-nav d-none d-md-flex">
                 <li class="nav-item"><a class="nav-link" href="#">Tableaux de bord</a></li>
@@ -200,105 +242,122 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb my-0 ms-2">
                     <li class="breadcrumb-item">
-                        <!-- if breadcrumb is single--><span>Home</span>
+                        <!-- if breadcrumb is single--><span>Acceuil</span>
                     </li>
-                    <li class="breadcrumb-item active"><span>Bases Annonces</span></li>
+                    <li class="breadcrumb-item active"><span>Centre de contacts</span></li>
                 </ol>
             </nav>
 
         </div>
     </header>
+        <!--Debut du code-->
 
-<!-- Filtre de recherche -->
-
-    <p>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Rechercher</option>
-            <option value="1">Cenon</option>
-            <option value="2">Bègle</option>
-            <option value="3">Gradignan</option>
-        </select>
-    </p>
-
-    <!--Debut des annonce-->
-
-    <div class="container text-center">
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/1.jpg" class="card-img-top" alt="...">
+        <div class="body flex-grow-1 px-3">
+            <div class="container-lg">
+                <div class="car"></div>
+                <div class="card mb-4">
+                    <div class="card-header"><strong>Contacts différents référents</strong><span class="small ms-1"></span>
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">Cenon</h5>
-                        <p class="card-text">Maison 5 pièces, composé d'une </p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
+                        <p class="text-medium-emphasis small">Informations de contact des différents référents</p>
+                        <div class="example">
+                            <div class="tab-content rounded-bottom">
+                                <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-387">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Statut</th>
+                                            <th scope="col">Nom et prénom</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Téléphone</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">Directeur agence</th>
+                                            <td>Mar Di-Gras</td>
+                                            <td>mardi-gras@immoaquitaine.fr</td>
+                                            <td>+33 215 215 218</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Comptable</th>
+                                            <td>Desange Morra</td>
+                                            <td>desangemorra@immoaquitaine.fr</td>
+                                            <td>+33 215 215 216</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Responsable Commercial</th>
+                                            <td>Lome Pale</td>
+                                            <td>lomepale@immoaquitaine.fr</td>
+                                            <td>+33 215 215 214</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Responsable Administratif</th>
+                                            <td>Azarov Laura</td>
+                                            <td>azarovlaura@immoaquitaine.fr</td>
+                                            <td>+33 215 215 213</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header"><strong>Nous contacter</strong><span class="small ms-1"></span></div>
+                    <div class="card-body">
+                        <p class="text-medium-emphasis small"></p>
+                        <div class="example">
+                            <div class="tab-content rounded-bottom">
+                                <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-277">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Horaire d'ouverture</h5>
+                                                    <p class="card-text">Direction générale <br>Du lundi au vendredi <br> <em>9h00-12h00
+                                                        14h00-17h00</em> <br>Fermé le week-end</p>
+                                                    <p class="card-text">Pôle commercial <br>Du lundi au vendredi <br> <em>9h00-12h00
+                                                        13h00-17h00</em> <br>Fermé le week-end</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Horaires d'ouverture</h5>
+                                                    <p class="card-text">Pôle administratif <br>Du lundi au vendredi <br> <em>9h00-12h00
+                                                        13h00-17h00</em> <br>Fermé le week-end </p>
+                                                    <p class="card-text">Comptabilité <br>Du lundi au vendredi <br> <em>8h30-12h30
+                                                        14h00-17h00</em> <br>Fermé le week-end</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/4.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Talence</h5>
-                        <p class="card-text">Studio étudiant sur Talence...</p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Bègle</h5>
-                        <p class="card-text">Appartement de 2 pièces, RDC</p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Gradigan</h5>
-                        <p class="card-text">Maison de 5 pièces </p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/2-1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Villenave d'Ornon</h5>
-                        <p class="card-text">Appartement de 3 pièces avec une pièce de vie et un jardin privatif </p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="/assets/img/annonces/2-2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Pessac</h5>
-                        <p class="card-text">Studio lumineux, situé non loin du centre </p>
-                        <a href="#" class="btn btn-success">Nous contacter</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
-    <!--Fin des annonces -->
-</div>
-<footer class="footer">
-    <div><a href="https://coreui.io">Immo Aquitaine 33 </a><a href="https://coreui.io"></a> © 2022 creativeLabs.</div>
-    <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
-</footer>
-</div>
-<!-- CoreUI and necessary plugins-->
-<script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
-<script src="vendors/simplebar/js/simplebar.min.js"></script>
-<script>
-</script>
+        <div class="body flex-grow-1 px-3">
+            <div class="container-lg">
+            </div>
 
+
+            <!--Debut du footer-->
+        </div>
+        <footer class="footer">
+            <div><a href="https://coreui.io">Immo Aquitaine 33 </a><a href="https://coreui.io"></a> © 2022 creativeLabs.</div>
+            <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
+        </footer>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <script src="vendors/simplebar/js/simplebar.min.js"></script>
+    <script>
+    </script>
 </body>
 </html>
